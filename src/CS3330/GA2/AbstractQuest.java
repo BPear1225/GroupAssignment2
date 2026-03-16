@@ -1,16 +1,16 @@
 package CS3330.GA2;
 
 public abstract class AbstractQuest implements Quest {
-	int id;
-	String title;
-	int basePoints;
-	boolean isCompleted;
+	private int id;
+	private String title;
+	private int basePoints;
+	private boolean isCompleted;
 	
 	public AbstractQuest(int id,String title,int basePoints) {
 		if(id<=0) {
 			throw new IllegalArgumentException("Id must be a positive integer");
 		}
-		if(title.isBlank()) {
+		if(title==null || title.isBlank()) {
 			throw new IllegalArgumentException("A quest must have a title");
 		}
 		if(basePoints<=0) {
