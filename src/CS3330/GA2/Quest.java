@@ -6,4 +6,5 @@ public interface Quest {
 	int getBasePoints();
 	boolean isCompleted();
 	int completeFor(Student s);
+	
 }
