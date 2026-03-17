@@ -5,9 +5,11 @@ public class EventCheckInQuest extends AbstractQuest {
 
     public EventCheckInQuest(int id, String title, int basePoints, String eventName) {
         super(id, title, basePoints);
+        
         if (eventName == null || eventName.isBlank()) {
-            throw new IllegalArgumentException("eventName must not be null or blank");
+            throw new IllegalArgumentException("Please enter a valid event.");
         }
+        
         this.eventName = eventName;
     }
 

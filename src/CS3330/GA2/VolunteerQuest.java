@@ -5,9 +5,11 @@ public class VolunteerQuest extends AbstractQuest {
 
     public VolunteerQuest(int id, String title, int basePoints, int hours) {
         super(id, title, basePoints);
+        
         if (hours <= 0) {
-            throw new IllegalArgumentException("hours must be positive");
+            throw new IllegalArgumentException("Please enter a valid amount of hours");
         }
+        
         this.hours = hours;
     }
 
