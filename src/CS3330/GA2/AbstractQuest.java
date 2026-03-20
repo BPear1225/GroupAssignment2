@@ -43,8 +43,10 @@ public abstract class AbstractQuest implements Quest {
 		return isCompleted;
 	}
 	
+	public abstract int completeFor(Student s);
+	
 	@Override
 	public String toString(){
-		return getTitle() + ": A quest that aponcompletion will award " + getBasePoints()+" that is curently "+ (isCompleted? "incomplete": "complete");
+		return getTitle() + ": A quest that upon completion will award " + getBasePoints()+" that is curently "+ (isCompleted? "incomplete": "complete");
 	}
 }
