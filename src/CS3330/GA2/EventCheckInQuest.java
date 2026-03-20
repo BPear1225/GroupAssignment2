@@ -19,8 +19,8 @@ public class EventCheckInQuest extends AbstractQuest {
 
     @Override
     public int completeFor(Student s) {
-        if (isCompleted()) {
-        	return -1; //Do we need to return -1 or check for completion at all? It just says completeFor must update the completion state, so returning -1 wouldn't do that.
+        if (isCompleted()) { //A quest cannot be completed twice
+        	throw new IllegalStateException("Quest is already completed");
         }
         int points = getBasePoints();
         s.addPoints(points);
