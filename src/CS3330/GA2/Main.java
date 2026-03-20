@@ -16,5 +16,38 @@ public class Main {
 		questBoard.addQuest(pickUpTrashYouSeeInDowntown);
 		questBoard.addQuest(donateBlood);
 		
+		Student jimr = new Student("Jim Ries");
+		Student joeSchmoe = new Student("Joe Schmoe");
+		Student jimr2 = new Student("Jim Ries");
+		
+		questBoard.assignQuest(jimr, 0);
+		questBoard.assignQuest(jimr, 4);
+		questBoard.assignQuest(joeSchmoe, 2);
+		questBoard.assignQuest(joeSchmoe,  5);
+		questBoard.assignQuest(jimr2, 1);
+		questBoard.assignQuest(jimr2, 3);
+		
+		questBoard.completeQuest(jimr, 0);
+		questBoard.completeQuest(jimr, 1);
+		questBoard.completeQuest(joeSchmoe, 2);
+		questBoard.completeQuest(joeSchmoe, 5);
+		questBoard.completeQuest(jimr2, 4);
+		
+		
+		questBoard.printAllQuests();
+		
+		questBoard.printAssignmentsFor(jimr);
+		questBoard.printAssignmentsFor(joeSchmoe);
+		questBoard.printAssignmentsFor(jimr2);
+		
+		
+		System.out.println(jimr.getPoints());
+		System.out.println(joeSchmoe.getPoints());
+		System.out.println(jimr2.getPoints());
+		
+		
+		RewardUtil.sumPoints(questBoard.getStudents());
+		
+		
 	}
 }
