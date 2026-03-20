@@ -24,13 +24,6 @@ public class StreakQuest extends AbstractQuest {
         s.addPoints(points);
         return points;
     }
-    
-    
-
-    @Override
-    public String toString() {
-        return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + days + ", " + isCompleted();
-    }
 
 	public String getUniqueProperty() {
 		return String.valueOf(days);
