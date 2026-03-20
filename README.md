@@ -2,6 +2,6 @@
 
 Tianyi Zhang-Concrete quest types (EventCheckInQuest, VolunteerQuest, StreakQuest) and Questboard
 
-Micky Sheridan- 
+Micky Sheridan- Student, RewardUtil, and Main
 
-Brett Pearson-Quest and AbstractQuest, main
+Brett Pearson-Quest and AbstractQuest, Main
