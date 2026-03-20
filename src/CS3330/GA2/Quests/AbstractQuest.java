@@ -49,6 +49,6 @@ public abstract class AbstractQuest implements Quest {
 	
 	@Override
 	public String toString(){
-		return "Quest #"+getId() + ", a " + this.getClass().getName()+" quest: "+ getTitle() + ", " + getBasePoints() + ", " + getUniqueProperty() + ", " + isCompleted();
+		return "Quest #"+getId() + ", a " + this.getClass().getSimpleName()+" quest: "+ getTitle() + ", " + getBasePoints() + ", " + getUniqueProperty() + ", " + isCompleted();
 	}
 }
