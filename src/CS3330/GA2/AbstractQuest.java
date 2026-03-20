@@ -28,13 +28,11 @@ public abstract class AbstractQuest implements Quest {
 
 	@Override
 	public String getTitle() {
-		
 		return title;
 	}
 
 	@Override
 	public int getBasePoints() {
-		
 		return basePoints;
 	}
 
@@ -43,8 +41,10 @@ public abstract class AbstractQuest implements Quest {
 		return isCompleted;
 	}
 	
+	public abstract String getUniqueProperty();
+	
 	@Override
 	public String toString(){
-		return getTitle() + ": A quest that aponcompletion will award " + getBasePoints()+" that is curently "+ (isCompleted? "incomplete": "complete");
+		return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + getUniqueProperty() + ", " + isCompleted();
 	}
 }
