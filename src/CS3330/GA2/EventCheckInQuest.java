@@ -26,9 +26,9 @@ public class EventCheckInQuest extends AbstractQuest {
         s.addPoints(points);
         return points;
     }
-
-    @Override
-    public String toString() {
-        return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + eventName + ", " + isCompleted();
+    
+    public String getUniqueProperty(){
+    	return eventName;
     }
+    
 }

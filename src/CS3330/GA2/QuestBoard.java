@@ -24,7 +24,7 @@ public class QuestBoard {
     }
 
     public Quest findQuest(int id) {
-        return questsById.getOrDefault(id, null);
+        return questsById.get(id);
     }
 
     public void assignQuest(Student s, int questId) {

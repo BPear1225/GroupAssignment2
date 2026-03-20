@@ -27,8 +27,7 @@ public class VolunteerQuest extends AbstractQuest {
         return points;
     }
 
-    @Override
-    public String toString() {
-        return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + hours + ", " + isCompleted();
-    }
+    public String getUniqueProperty(){
+		return String.valueOf(hours);
+	}
 }
