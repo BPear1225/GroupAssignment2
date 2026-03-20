@@ -43,7 +43,7 @@ public abstract class AbstractQuest implements Quest {
 		return isCompleted;
 	}
 	
-	public abstract int completeFor(Student s);
+	public abstract int completeFor(Student s); //added by Micky
 	
 	@Override
 	public String toString(){

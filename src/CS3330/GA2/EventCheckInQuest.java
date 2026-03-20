@@ -19,7 +19,9 @@ public class EventCheckInQuest extends AbstractQuest {
 
     @Override
     public int completeFor(Student s) {
-        isCompleted();
+        if (isCompleted()) {
+        	return -1; //Do we need to return -1 or check for completion at all? It just says completeFor must update the completion state, so returning -1 wouldn't do that.
+        }
         int points = getBasePoints();
         s.addPoints(points);
         return points;
