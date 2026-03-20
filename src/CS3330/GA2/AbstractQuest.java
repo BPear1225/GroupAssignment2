@@ -43,6 +43,8 @@ public abstract class AbstractQuest implements Quest {
 	
 	public abstract String getUniqueProperty();
 	
+	public abstract int completeFor(Student s);
+	
 	@Override
 	public String toString(){
 		return "Quest #"+getId() + ", a " + this.getClass()+" quest: "+ getTitle() + ", " + getBasePoints() + ", " + getUniqueProperty() + ", " + isCompleted();
