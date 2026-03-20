@@ -82,5 +82,10 @@ public class QuestBoard {
         
         RewardUtil.printAll(studentQuests);
     }
+    
+    public List<Student> getStudents() {
+		List<Student> students = List.copyOf(assignments.keySet());
+		return students;
+	}
 }
 
