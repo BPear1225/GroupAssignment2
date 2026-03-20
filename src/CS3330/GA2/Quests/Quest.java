@@ -1,4 +1,6 @@
-package CS3330.GA2;
+package CS3330.GA2.Quests;
+
+import CS3330.GA2.Student;
 
 public interface Quest {
 	int getId();

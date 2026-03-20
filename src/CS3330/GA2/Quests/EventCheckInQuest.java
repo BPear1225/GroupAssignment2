@@ -1,4 +1,6 @@
-package CS3330.GA2;
+package CS3330.GA2.Quests;
+
+import CS3330.GA2.Student;
 
 public class EventCheckInQuest extends AbstractQuest {
     private String eventName;
@@ -17,13 +19,13 @@ public class EventCheckInQuest extends AbstractQuest {
         return eventName;
     }
 
-    @Override
     public int completeFor(Student s) {
         if (isCompleted()) { //A quest cannot be completed twice
         	throw new IllegalStateException("Quest is already completed");
         }
         int points = getBasePoints();
         s.addPoints(points);
+        isCompleted = true;
         return points;
     }
     

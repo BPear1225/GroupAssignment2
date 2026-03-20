@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import CS3330.GA2.Quests.Quest;
+
 public class QuestBoard {
     private Map<Integer, Quest> questsById;
     private Map<Student, List<Quest>> assignments;

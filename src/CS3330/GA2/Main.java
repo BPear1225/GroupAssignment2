@@ -1,5 +1,9 @@
 package CS3330.GA2;
 
+import CS3330.GA2.Quests.EventCheckInQuest;
+import CS3330.GA2.Quests.StreakQuest;
+import CS3330.GA2.Quests.VolunteerQuest;
+
 public class Main {
 	public static void main(String[] args0 ) {
 		QuestBoard questBoard = new QuestBoard();
@@ -37,8 +41,11 @@ public class Main {
 		questBoard.printAllQuests();
 		
 		questBoard.printAssignmentsFor(jimr);
+		System.out.println();
 		questBoard.printAssignmentsFor(joeSchmoe);
+		System.out.println();
 		questBoard.printAssignmentsFor(jimr2);
+		System.out.println();
 		
 		
 		System.out.println(jimr.getPoints());

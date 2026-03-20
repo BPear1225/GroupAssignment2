@@ -1,4 +1,6 @@
-package CS3330.GA2;
+package CS3330.GA2.Quests;
+
+import CS3330.GA2.Student;
 
 public class VolunteerQuest extends AbstractQuest {
     private int hours;
@@ -24,6 +26,7 @@ public class VolunteerQuest extends AbstractQuest {
         }
         int points = getBasePoints() * hours;
         s.addPoints(points);
+        isCompleted = true;
         return points;
     }
 

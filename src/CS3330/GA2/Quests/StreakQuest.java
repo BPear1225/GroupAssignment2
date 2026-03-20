@@ -1,4 +1,6 @@
-package CS3330.GA2;
+package CS3330.GA2.Quests;
+
+import CS3330.GA2.Student;
 
 public class StreakQuest extends AbstractQuest {
     private int days;
@@ -24,6 +26,7 @@ public class StreakQuest extends AbstractQuest {
         }
         int points = getBasePoints() + (days * 2);//Completion rule: linear bonus: basePoints + (days * 2)
         s.addPoints(points);
+        isCompleted = true;
         return points;
     }
 
