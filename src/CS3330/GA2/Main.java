@@ -48,6 +48,7 @@ public class Main {
 		
 		RewardUtil.sumPoints(questBoard.getStudents());
 		
+		questBoard.completeQuest(jimr, 0); //example error: completing a quest that has already been completed
 		
 	}
 }
