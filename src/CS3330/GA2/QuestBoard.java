@@ -1,5 +1,7 @@
 package CS3330.GA2;
 
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.Map;
 public class QuestBoard {
     private Map<Integer, Quest> questsById;
     private Map<Student, List<Quest>> assignments;
-
+    
     public QuestBoard() {
         questsById = new HashMap<>();
         assignments = new HashMap<>();
@@ -66,9 +68,8 @@ public class QuestBoard {
     }
 
     public void printAllQuests() {
-        for (Quest q : questsById.values()) {
-            System.out.println(q);
-        }
+    	List<Quest> questList = List.copyOf(questsById.values());
+        RewardUtil.printAll(questList);
     }
 
     public void printAssignmentsFor(Student s) {
@@ -81,8 +82,7 @@ public class QuestBoard {
         
         System.out.println("Assignments for " + s + ":");
         
-        for (Quest q : studentQuests) {
-            System.out.println("  " + q);
-        }
+        RewardUtil.printAll(studentQuests);
     }
 }
+

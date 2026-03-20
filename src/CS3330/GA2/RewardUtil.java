@@ -3,6 +3,7 @@ package CS3330.GA2;
 import java.util.List;
 
 public class RewardUtil<T> {
+<<<<<<< HEAD
 	
 	public static <T> void printAll(List<T> items) {
 		if (items == null) {
@@ -21,5 +22,8 @@ public class RewardUtil<T> {
 		}
 		
 		return totalPoints;
+=======
+	public static <T> void printAll(List <T> items) {
+>>>>>>> branch 'main' of git@github.com:BPear1225/GroupAssignment2.git
 	}
 }
