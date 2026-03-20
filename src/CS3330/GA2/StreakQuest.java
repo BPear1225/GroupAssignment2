@@ -19,14 +19,15 @@ public class StreakQuest extends AbstractQuest {
 
     @Override
     public int completeFor(Student s) {
-        isCompleted();
+        if (isCompleted()) { // A quest cannot be completed twice
+        	throw new IllegalStateException("Quest is already completed");
+        }
         int points = getBasePoints() + (days * 2);//Completion rule: linear bonus: basePoints + (days * 2)
         s.addPoints(points);
         return points;
     }
 
-    @Override
-    public String toString() {
-        return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + days + ", " + isCompleted();
-    }
+	public String getUniqueProperty() {
+		return String.valueOf(days);
+	}
 }

@@ -19,14 +19,16 @@ public class EventCheckInQuest extends AbstractQuest {
 
     @Override
     public int completeFor(Student s) {
-        isCompleted();
+        if (isCompleted()) { //A quest cannot be completed twice
+        	throw new IllegalStateException("Quest is already completed");
+        }
         int points = getBasePoints();
         s.addPoints(points);
         return points;
     }
-
-    @Override
-    public String toString() {
-        return getId() + ", " + getTitle() + ", " + getBasePoints() + ", " + eventName + ", " + isCompleted();
+    
+    public String getUniqueProperty(){
+    	return eventName;
     }
+    
 }
